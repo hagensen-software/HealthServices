@@ -1,0 +1,54 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11222.16 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthServices.AppHost", "HealthServices.AppHost\HealthServices.AppHost.csproj", "{F788A0FA-DBAF-4F94-8C7F-B06641EAF95F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthServices.ServiceDefaults", "HealthServices.ServiceDefaults\HealthServices.ServiceDefaults.csproj", "{67A4C37C-316B-FA0A-B169-6823AC2E9208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthServices.PersonService", "HealthServices.PersonService\HealthServices.PersonService.csproj", "{4A957A8F-CF12-C4AE-D6FE-449936D8E5A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthServices.Gateway", "HealthServices.Gateway\HealthServices.Gateway.csproj", "{499910CD-D6F7-1323-ADB4-6E803BEEA08C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthServices.Persons.Boundary", "HealthServices.Persons.Boundary\HealthServices.Persons.Boundary.csproj", "{B18A1490-A84A-43C2-8955-A27D01C0E30C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthServices.Keycloak.Boundary", "HealthServices.Keycloak.Boundary\HealthServices.Keycloak.Boundary.csproj", "{10A95D41-5EA8-425C-9057-6931B2C7935E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F788A0FA-DBAF-4F94-8C7F-B06641EAF95F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F788A0FA-DBAF-4F94-8C7F-B06641EAF95F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F788A0FA-DBAF-4F94-8C7F-B06641EAF95F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F788A0FA-DBAF-4F94-8C7F-B06641EAF95F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A4C37C-316B-FA0A-B169-6823AC2E9208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A4C37C-316B-FA0A-B169-6823AC2E9208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A4C37C-316B-FA0A-B169-6823AC2E9208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A4C37C-316B-FA0A-B169-6823AC2E9208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A957A8F-CF12-C4AE-D6FE-449936D8E5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A957A8F-CF12-C4AE-D6FE-449936D8E5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A957A8F-CF12-C4AE-D6FE-449936D8E5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A957A8F-CF12-C4AE-D6FE-449936D8E5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{499910CD-D6F7-1323-ADB4-6E803BEEA08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{499910CD-D6F7-1323-ADB4-6E803BEEA08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{499910CD-D6F7-1323-ADB4-6E803BEEA08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{499910CD-D6F7-1323-ADB4-6E803BEEA08C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18A1490-A84A-43C2-8955-A27D01C0E30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18A1490-A84A-43C2-8955-A27D01C0E30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18A1490-A84A-43C2-8955-A27D01C0E30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18A1490-A84A-43C2-8955-A27D01C0E30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A95D41-5EA8-425C-9057-6931B2C7935E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A95D41-5EA8-425C-9057-6931B2C7935E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A95D41-5EA8-425C-9057-6931B2C7935E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A95D41-5EA8-425C-9057-6931B2C7935E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3028B8A9-D67D-4CE3-B109-AF38D471519D}
+	EndGlobalSection
+EndGlobal

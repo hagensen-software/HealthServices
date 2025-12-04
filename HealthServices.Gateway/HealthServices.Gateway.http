@@ -1,0 +1,54 @@
+@HealthServices.Gateway_HostAddress = https://localhost:7200
+
+###
+
+# @name login
+POST http://localhost:8443/realms/health/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=health-client&grant_type=password&username=tmh&password=1234&scope=email openid
+
+###
+
+# @name login
+POST http://localhost:8443/realms/health/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=health-client&grant_type=refresh_token&refresh_token={{login.response.body.$.refresh_token}}
+
+
+###
+
+POST {{HealthServices.Gateway_HostAddress}}/api/createuser
+Authorization: Bearer {{login.response.body.$.access_token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "jdoe",
+  "password": "P@ssw0rd!",
+  "given": ["John", "D."],
+  "family": "Doe",
+  "email": "jdoe@example.com"
+}
+
+###
+
+# @name user
+GET {{HealthServices.Gateway_HostAddress}}/api/user/?username=jdoe
+Authorization: Bearer {{login.response.body.$.access_token}}
+Accept: application/json
+
+###
+
+GET {{HealthServices.Gateway_HostAddress}}/api/user/{{user.response.body.$.id.value}}
+Authorization: Bearer {{login.response.body.$.access_token}}
+Accept: application/json
+
+###
+
+GET {{HealthServices.Gateway_HostAddress}}/fhir/person/{{user.response.body.$.id.value}}
+Authorization: Bearer {{login.response.body.$.access_token}}
+Accept: application/json
+
+###
