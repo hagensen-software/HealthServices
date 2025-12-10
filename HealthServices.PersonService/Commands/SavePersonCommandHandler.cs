@@ -10,15 +10,7 @@ public class SavePersonCommandHandler(IDocumentSession session)
     {
         try
         {
-            var personEntity = new PersonEntity(
-                Guid.Parse(command.Person.Id.Value),
-                command.Person.UserName,
-                command.Person.Identifiers,
-                command.Person.Active,
-                command.Person.Name,
-                command.Person.Telecoms,
-                command.Person.Addresses
-            );
+            var personEntity = command.Person.ToEntity();
 
             session.Store(personEntity);
 

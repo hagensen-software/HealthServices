@@ -19,7 +19,6 @@ public class CreateUserCommandHandler(
     PersonServiceProxy personService,
     ILogger<CreateUserCommandHandler> logger)
 {
-    private const string keycloakSystem = "http://healthservices/keycloak";
     private const string emailSystem = "email";
 
     public async Task<IResult> Handle(

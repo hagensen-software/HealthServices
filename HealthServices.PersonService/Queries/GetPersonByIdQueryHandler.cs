@@ -13,14 +13,6 @@ public class GetPersonByIdQueryHandler(IDocumentSession session)
         if (personEntity == null)
             return Results.NotFound();
 
-        return Results.Json<PersonProfile>(new PersonProfile(
-            new PersonId(
-                request.Id.ToString()),
-            personEntity.UserName,
-            personEntity.Identifiers,
-            personEntity.Active,
-            personEntity.Name,
-            personEntity.Telecoms,
-            personEntity.Addresses));
+        return Results.Json<PersonProfile>(personEntity.ToProfile());
     }
 }
