@@ -14,7 +14,7 @@ public class SavePersonCommandHandler(IDocumentSession session)
 
             session.Store(personEntity);
 
-            await session.SaveChangesAsync();
+            await session.SaveChangesAsync(cancellationToken);
 
             return Results.Ok();
         }
