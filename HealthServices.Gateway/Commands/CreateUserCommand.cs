@@ -51,7 +51,7 @@ public class CreateUserCommandHandler(
         return Results.Problem(saveResult.StatusMessage, statusCode: (int?)saveResult.StatusCode);
     }
 
-    private PersonProfile? Merge(CreateUserCommand command, PersonProfile? person)
+    private static PersonProfile Merge(CreateUserCommand command, PersonProfile? person)
     {
         PersonId id = person?.Id ?? new PersonId(Guid.NewGuid().ToString());
         ImmutableList<PersonTelecom> telecoms = [
@@ -69,7 +69,7 @@ public class CreateUserCommandHandler(
                 new HumanNameUse("official"),
                 new HumanNameText(string.Join(' ', [.. command.Given, command.Family])),
                 new HumanNameFamily(command.Family),
-                command.Given.Select(g => new HumanNameGiven(g)).ToImmutableList(),
+                [.. command.Given.Select(g => new HumanNameGiven(g))],
                 null, null, null),
             telecoms,
             person?.Addresses ?? []);

@@ -4,7 +4,7 @@ namespace HealthServices.Gateway.Queries;
 
 public record GetPersonByUserNameQuery(string UserName);
 
-public class GetPersonByUserNameQueryHandler(PersonServiceProxy personService, ILogger<GetPersonByUserNameQueryHandler> logger)
+public class GetPersonByUserNameQueryHandler(PersonServiceProxy personService)
 {
     public async Task<IResult> Handle(GetPersonByUserNameQuery query, CancellationToken cancellationToken)
     {
