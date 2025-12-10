@@ -15,18 +15,14 @@ public class GetPersonByIdQueryHandler(PersonServiceProxy personService, ILogger
             return Results.Empty;
 
         if (query.AsUser)
-        {
             return Results.Ok(person);
-        }
-        else
-        {
-            person = person with { UserName = null };
 
-            return Results.Content(
-                FhirResponseHelper.HandleSerializationResult<PersonProfile>(
-                    person.ToFhirJsonString(),
-                    logger),
-                "application/json");
-        }
+        person = person with { UserName = null };
+
+        return Results.Content(
+            FhirResponseHelper.HandleSerializationResult<PersonProfile>(
+                person.ToFhirJsonString(),
+                logger),
+            "application/json");
     }
 }
